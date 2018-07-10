@@ -17,11 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url, include
 from rest_framework import routers
-from appointments.api import AppointmentViewSet
+from appointments.api import AppointmentViewset, PersonalAppointmentViewset
 
 router = routers.DefaultRouter()
-
-router.register(r'appointments', AppointmentViewSet)
+router.register(r'appointments', AppointmentViewset)
+router.register(r'personalappointments', PersonalAppointmentViewset)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
