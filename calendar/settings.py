@@ -36,8 +36,9 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 # TEMPLATE_DEBUG = DEBUG
 
 # ALLOWED_HOSTS = config('ALLOWED_HOSTS')
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-
+ALLOWED_HOSTS = ['django-react-scheduler-heroku.herokuapp.com',
+                 'localhost', '127.0.0.1']
+# TODO: MaKE ENV VARS    ^^^
 
 # Application definition
 
@@ -141,7 +142,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # TODO: 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # from rest_framework.authentication import SessionAuthentication, BasicAuthentication, TokenAuthentication
