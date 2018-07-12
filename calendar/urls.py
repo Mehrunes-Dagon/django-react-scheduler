@@ -18,6 +18,7 @@ from django.urls import path, include, re_path
 from django.conf.urls import url, include
 from rest_framework import routers
 from rest_framework.authtoken import views
+from django.views.generic import TemplateView
 
 from appointments.api import AppointmentViewset, PersonalAppointmentViewset
 
@@ -29,5 +30,5 @@ urlpatterns = [
     re_path(r'^api-token-auth/', views.obtain_auth_token),
     path('admin/', admin.site.urls),
     path(r'api/', include(router.urls)),
-    # re_path(r'^api-token-auth/', views.obtain_auth_token),
+    re_path('.*', TemplateView.as_view(template_name='index.html')),
 ]
