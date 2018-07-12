@@ -36,9 +36,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 # TEMPLATE_DEBUG = DEBUG
 
 # ALLOWED_HOSTS = config('ALLOWED_HOSTS')
-ALLOWED_HOSTS = ['.herokuapp.com',
-                 'localhost', '127.0.0.1']
-# TODO: MaKE ENV VARS    ^^^
+ALLOWED_HOSTS = config('ALLOWED_HOSTS')
 
 # Application definition
 
@@ -91,7 +89,7 @@ WSGI_APPLICATION = 'calendar.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-# DATABASE_URL = config('DATABASE_URL')
+DATABASE_URL = config('DATABASE_URL')
 
 if DEBUG:
     DATABASES = {
