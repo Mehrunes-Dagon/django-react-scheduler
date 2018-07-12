@@ -36,7 +36,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 # TEMPLATE_DEBUG = DEBUG
 
 # ALLOWED_HOSTS = config('ALLOWED_HOSTS')
-ALLOWED_HOSTS = ['django-react-scheduler-heroku.herokuapp.com',
+ALLOWED_HOSTS = ['.herokuapp.com',
                  'localhost', '127.0.0.1']
 # TODO: MaKE ENV VARS    ^^^
 
